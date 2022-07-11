@@ -36,7 +36,9 @@ function getAccel(){
                 }
                 
                 dot = document.getElementsByClassName("indicatorDot")[0]
-                dot.setAttribute('style', "height:20px; width:20px; border-radius: 10px; background-color:goldenrod; position: absolute; left:" + (px) + "%;" + "top:" + (py) + "%;"); 
+                dot.setAttribute('style', "height:20px; width:20px; border-radius: 10px; background-color:goldenrod; position: absolute; left:" + (px) + "%;" + "top:" + (py) + "%;");
+                
+                document.getElementById("test-content-modification-arbitrary").textContent = `Test content modification: Arbitrary: Success`;
             });
         }
     });
