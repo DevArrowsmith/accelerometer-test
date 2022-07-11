@@ -4,6 +4,11 @@ var vx = 0.0; // Velocity x and y
 var vy = 0.0;
 var updateRate = 1/60; // Sensor refresh rate
 
+const mod1 = document.getElementById("test-content-modification-arbitrary");
+const mod2 = document.getElementById("test-content-modification-arbitrary-two");
+const mod3 = document.getElementById("test-content-modification-value");
+const dot = document.getElementsByClassName("indicatorDot")[0]
+
 function getAccel(){
   alert("getAccel invoked");
     DeviceMotionEvent.requestPermission().then(response => {
@@ -35,16 +40,12 @@ function getAccel(){
                     vy = 0;
                 }
 
-                mod1 = document.getElementById("test-content-modification-arbitrary");
                 mod1.textContent = `Test content modification: Arbitrary: Success`;
 
-                mod2 = document.getElementById("test-content-modification-arbitrary-two");
                 mod2.textContent = `Test content modification: Arbitrary 2: Success`;
 
-                mod3 = document.getElementById("test-content-modification-value");
                 mod3.textContent = `Test content modification: Value: ${rotation_degrees}`;
                 
-                dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "height:20px; width:20px; border-radius: 10px; background-color:goldenrod; position: absolute; left:" + (px) + "%;" + "top:" + (py) + "%;");
             });
         }
