@@ -4,7 +4,7 @@ var vx = 0.0; // Velocity x and y
 var vy = 0.0;
 var updateRate = 1/60; // Sensor refresh rate
 
-let mod1 = document.getElementById("test-content-modification-arbitrary");
+const mod1 = document.getElementById("test-content-modification-arbitrary");
 
 function getAccel(){
   alert("getAccel invoked");
