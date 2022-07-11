@@ -34,11 +34,11 @@ function getAccel(){
                     py = Math.max(0, Math.min(98, py)) // Clip py between 0-98
                     vy = 0;
                 }
+
+                document.getElementById("test-content-modification-arbitrary").textContent = `Test content modification: Arbitrary: Success`;
                 
                 dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "height:20px; width:20px; border-radius: 10px; background-color:goldenrod; position: absolute; left:" + (px) + "%;" + "top:" + (py) + "%;");
-                
-                document.getElementById("test-content-modification-arbitrary").textContent = `Test content modification: Arbitrary: Success`;
             });
         }
     });
