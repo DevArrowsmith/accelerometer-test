@@ -1,36 +1,41 @@
 let currentColumn = 2;
 
+const block = document.getElementById("block");
+const alphaReadout = document.getElementById("alpha");
+const betareadout = document.getElementById("beta");
+const gammaReadout = document.getElementById("gamma");
+const columnReadout = document.getElementById("current-column")
+
 function getMotionPermissions(){
     alert("getPermission invoked");
     DeviceMotionEvent.requestPermission().then(response => {
         alert(`Response: ${response}`);
         if (response == 'granted') {
-          // window.addEventListener("deviceorientation", moveBlock);
-          window.addEventListener('deviceorientation',(event) => {
+          window.addEventListener('deviceorientation', (event) => {
             alpha = event.alpha;
             beta = event.beta;
             gamma = event.gamma;
 
-            document.getElementById("alpha").textContent = `${alpha.toFixed(2)}`
-            document.getElementById("beta").textContent = `${beta.toFixed(2)}`
-            document.getElementById("gamma").textContent = `${gamma.toFixed(2)}`
+            alphaReadout.textContent = `${alpha.toFixed(2)}`;
+            betaReadout.textContent = `${beta.toFixed(2)}`;
+            gammaReadout.textContent = `${gamma.toFixed(2)}`;
 
-            if (gamma < -70) {
-              currentColumn = 1;
-              document.getElementById("block").className = `column-${currentColumn}`;
-            }
+            // if (gamma < -70) {
+            //   currentColumn = 1;
+            //   block.className = `column-${currentColumn}`;
+            // }
             
-            if (gamma > -70 && gamma < 70) {
-              currentColumn = 2;
-              document.getElementById("block").className = `column-${currentColumn}`;
-            }
+            // if (gamma > -70 && gamma < 70) {
+            //   currentColumn = 2;
+            //   block.className = `column-${currentColumn}`;
+            // }
             
-            if (gamma > 70) {
-              currentColumn = 3;
-              document.getElementById("block").className = `column-${currentColumn}`;
-            }
+            // if (gamma > 70) {
+            //   currentColumn = 3;
+            //   block.className = `column-${currentColumn}`;
+            // }
 
-            document.getElementById("current-column").textContent = `${currentColumn}`;
+            // columnReadout.textContent = `${currentColumn}`;
           });
         }
     });
