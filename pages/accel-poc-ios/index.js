@@ -7,9 +7,9 @@ function getMotionPermissions(){
         if (response == 'granted') {
           // window.addEventListener("deviceorientation", moveBlock);
           window.addEventListener('deviceorientation',(event) => {
-            let alpha = event.alpha;
-            let beta = event.beta;
-            let gamma = event.gamma;
+            alpha = event.alpha;
+            beta = event.beta;
+            gamma = event.gamma;
 
             document.getElementById("alpha").textContent = `${alpha.toFixed(2)}`
             document.getElementById("beta").textContent = `${beta.toFixed(2)}`
