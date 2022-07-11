@@ -37,6 +37,8 @@ function getAccel(){
 
                 document.getElementById("test-content-modification-arbitrary").textContent = `Test content modification: Arbitrary: Success`;
 
+                document.getElementById("test-content-modification-arbitrary-two").textContent = `Test content modification: Arbitrary 2: Success`;
+
                 document.getElementById("test-content-modification-value").textContent = `Test content modification: Value: ${rotation_degrees}`;
                 
                 dot = document.getElementsByClassName("indicatorDot")[0]
