@@ -36,6 +36,8 @@ function getAccel(){
                 }
 
                 document.getElementById("test-content-modification-arbitrary").textContent = `Test content modification: Arbitrary: Success`;
+
+                document.getElementById("test-content-modification-value").textContent = `Test content modification: Value: ${rotation_degrees}`;
                 
                 dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "height:20px; width:20px; border-radius: 10px; background-color:goldenrod; position: absolute; left:" + (px) + "%;" + "top:" + (py) + "%;");
