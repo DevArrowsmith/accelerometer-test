@@ -5,6 +5,9 @@ var vy = 0.0;
 var updateRate = 1/60; // Sensor refresh rate
 
 const mod1 = document.getElementById("test-content-modification-arbitrary");
+const mod1 = document.getElementById("test-content-modification-arbitrary");
+const mod1 = document.getElementById("test-content-modification-arbitrary");
+const mod1 = document.getElementById("test-content-modification-arbitrary");
 
 function getAccel(){
   alert("getAccel invoked");
@@ -37,7 +40,7 @@ function getAccel(){
                     vy = 0;
                 }
 
-                mod1 = document.getElementById("test-content-modification-arbitrary");
+                // mod1 = document.getElementById("test-content-modification-arbitrary");
                 mod1.textContent = `Test content modification: Arbitrary: Success`;
 
                 mod2 = document.getElementById("test-content-modification-arbitrary-two");
