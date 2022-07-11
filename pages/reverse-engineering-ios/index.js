@@ -4,10 +4,8 @@ var vx = 0.0; // Velocity x and y
 var vy = 0.0;
 var updateRate = 1/60; // Sensor refresh rate
 
-const mod1 = document.getElementById("test-content-modification-arbitrary");
-const mod2 = document.getElementById("test-content-modification-arbitrary-two");
-const mod3 = document.getElementById("test-content-modification-value");
-const dot = document.getElementsByClassName("indicatorDot")[0]
+let mod1 = document.getElementById("test-content-modification-arbitrary");
+mod2 = document.getElementById("test-content-modification-arbitrary-two");
 
 function getAccel(){
   alert("getAccel invoked");
@@ -39,6 +37,9 @@ function getAccel(){
                     py = Math.max(0, Math.min(98, py)) // Clip py between 0-98
                     vy = 0;
                 }
+
+                let mod3 = document.getElementById("test-content-modification-value");
+                const dot = document.getElementsByClassName("indicatorDot")[0]
 
                 mod1.textContent = `Test content modification: Arbitrary: Success`;
 
