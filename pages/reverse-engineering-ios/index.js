@@ -4,7 +4,7 @@ var vx = 0.0; // Velocity x and y
 var vy = 0.0;
 var updateRate = 1/60; // Sensor refresh rate
 
-mod1 = document.getElementById("test-content-modification-arbitrary");
+var mod1 = document.getElementById("test-content-modification-arbitrary");
 
 function getAccel(){
   alert("getAccel invoked");
@@ -37,16 +37,16 @@ function getAccel(){
                     vy = 0;
                 }
 
-                mod2 = document.getElementById("test-content-modification-arbitrary-two");
-                mod3 = document.getElementById("test-content-modification-value");
-                dot = document.getElementsByClassName("indicatorDot")[0]
-
+                mod1 = document.getElementById("test-content-modification-arbitrary");
                 mod1.textContent = `Test content modification: Arbitrary: Success`;
 
+                mod2 = document.getElementById("test-content-modification-arbitrary-two");
                 mod2.textContent = `Test content modification: Arbitrary 2: Success`;
 
+                mod3 = document.getElementById("test-content-modification-value");
                 mod3.textContent = `Test content modification: Value: ${rotation_degrees}`;
-                
+
+                dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "height:20px; width:20px; border-radius: 10px; background-color:goldenrod; position: absolute; left:" + (px) + "%;" + "top:" + (py) + "%;");
             });
         }
