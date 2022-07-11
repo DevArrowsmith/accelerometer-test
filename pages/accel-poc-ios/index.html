@@ -6,7 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="index.js"></script>
+    <script>
+      let currentColumn = 2;
+
+function getMotionPermissions(){
+    alert("getPermission invoked");
+    DeviceMotionEvent.requestPermission().then(response => {
+        alert(`Response: ${response}`);
+        if (response == 'granted') {
+          
+          window.addEventListener('deviceorientation',(event) => {
+            alpha = event.alpha;
+            beta = event.beta;
+            gamma = event.gamma;
+
+            document.getElementById("alpha").textContent = `${alpha.toFixed(2)}`
+            document.getElementById("beta").textContent = `${beta.toFixed(2)}`
+            document.getElementById("gamma").textContent = `${gamma.toFixed(2)}`
+
+            if (gamma < -70) {
+              currentColumn = 1;
+              document.getElementById("block").className = `column-${currentColumn}`;
+            }
+            
+            if (gamma > -70 && gamma < 70) {
+              currentColumn = 2;
+              document.getElementById("block").className = `column-${currentColumn}`;
+            }
+            
+            if (gamma > 70) {
+              currentColumn = 3;
+              document.getElementById("block").className = `column-${currentColumn}`;
+            }
+
+            document.getElementById("current-column").textContent = `${currentColumn}`;
+          });
+        }
+    });
+}
+    </script>
 </head>
 <body>
   <div id="centralise">
