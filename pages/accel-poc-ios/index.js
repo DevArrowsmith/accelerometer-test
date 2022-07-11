@@ -7,6 +7,7 @@ let currentColumn = 2;
 //getAccel function: Tested, causes permissions access.
 function getAccel(){
     DeviceMotionEvent.requestPermission().then(response => {
+        alert(`Response: ${response}`);
         if (response == 'granted') {
           window.addEventListener("deviceorientation", moveBlock);
         }
