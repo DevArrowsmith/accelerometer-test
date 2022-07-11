@@ -1,15 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+  color: #fefefe;
+  font-family: Roboto, arial, sans-serif;
+  font-size: 1.4rem;
+}
+
 body {
   background-color: #121212;
 }
 
-#accelerometer-permissions {
-  display: none;
+.link {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   background-color: #343434;
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: #676767;
 }
 
 #centralise {
@@ -19,47 +29,4 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#container {
-  position: relative;
-  height: 75vh;
-  max-height: 25vw;
-  aspect-ratio: 3 / 1;
-  border-radius: 10px;
-  background-image: linear-gradient(90deg, #feda84 33.33%, #ff9b83 33.33%, #ff9b83 66.67%, #976393 66.67%)
-}
-
-#block {
-  position: absolute;
-  top: 25%;
-  height: 50%;
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  background-color: #43457f;
-  transition: left 0.3s ease;
-}
-
-.column-1 {
-  left: 5%;
-}
-
-.column-2 {
-    left: 40%;
-}
-
-.column-3 {
-    left: 80%;
-}
-
-.readouts {
-  display: flex;
-  flex-direction: column;
-  min-width: 180px;
-}
-
-span {
-  font-size: 1.4rem;
-  font-family: Roboto, arial, sans-serif;
-  color: #fefefe;
 }
