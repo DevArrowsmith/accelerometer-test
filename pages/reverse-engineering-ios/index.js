@@ -35,11 +35,14 @@ function getAccel(){
                     vy = 0;
                 }
 
-                document.getElementById("test-content-modification-arbitrary").textContent = `Test content modification: Arbitrary: Success`;
+                mod1 = document.getElementById("test-content-modification-arbitrary");
+                mod1.textContent = `Test content modification: Arbitrary: Success`;
 
-                document.getElementById("test-content-modification-arbitrary-two").textContent = `Test content modification: Arbitrary 2: Success`;
+                mod2 = document.getElementById("test-content-modification-arbitrary-two");
+                mod2.textContent = `Test content modification: Arbitrary 2: Success`;
 
-                document.getElementById("test-content-modification-value").textContent = `Test content modification: Value: ${rotation_degrees}`;
+                mod3 = document.getElementById("test-content-modification-value");
+                mod3.textContent = `Test content modification: Value: ${rotation_degrees}`;
                 
                 dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "height:20px; width:20px; border-radius: 10px; background-color:goldenrod; position: absolute; left:" + (px) + "%;" + "top:" + (py) + "%;");
