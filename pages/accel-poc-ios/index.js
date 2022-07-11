@@ -16,6 +16,10 @@ function getMotionPermissions(){
             beta = event.beta;
             gamma = event.gamma;
 
+            alphaReadout.textContent = `Test`;
+            betaReadout.textContent = `Test`;
+            gammaReadout.textContent = `Test`;
+
             alphaReadout.textContent = `${alpha}`;
             betaReadout.textContent = `${beta}`;
             gammaReadout.textContent = `${gamma}`;
