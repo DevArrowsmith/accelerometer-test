@@ -1,8 +1,4 @@
- 
 let currentColumn = 2;
-
-//getAccel test function
-// const getAccel = () => {alert("Click Test")};
 
 //getAccel function: Tested, causes permissions access.
 function getAccel(){
@@ -13,7 +9,6 @@ function getAccel(){
         }
     });
 }
-
 
 // Event listener: Functions (Tested)
 document.getElementById("accelerometer-permissions").addEventListener("click", getAccel);

@@ -17,6 +17,11 @@ body {
   background-color: #343434;
 }
 
+#accelerometer-permissions:hover {
+  cursor: pointer;
+  background-color: #676767;
+}
+
 #centralise {
   width: 100vw;
   height: 100vh;
