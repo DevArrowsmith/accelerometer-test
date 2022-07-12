@@ -1,7 +1,5 @@
 let currentColumn = 2;
 
-DeviceMotionEvent.requestPermission();
-
 function moveBlock(event) {  
   if (event.alpha) {
     document.getElementById("alpha").textContent = `${event.alpha.toFixed(2)}`
