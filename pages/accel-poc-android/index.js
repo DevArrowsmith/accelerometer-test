@@ -1,34 +1,40 @@
 let currentColumn = 2;
 
+const block = document.getElementById("block");
+const alphaReadout = document.getElementById("alpha");
+const betaReadout = document.getElementById("beta");
+const gammaReadout = document.getElementById("gamma");
+const columnReadout = document.getElementById("current-column");
+
 function moveBlock(event) {  
   if (event.alpha) {
-    document.getElementById("alpha").textContent = `${event.alpha.toFixed(2)}`
+    alphaReadout.textContent = `${event.alpha.toFixed(2)}`
+  }
+
+  if (event.beta) {
+    betaReadout.textContent = `${event.beta.toFixed(2)}`
   }
 
   if (event.gamma) {
-    document.getElementById("gamma").textContent = `${event.gamma.toFixed(2)}`
+    gammaReadout.textContent = `${event.gamma.toFixed(2)}`
   }
   
-  if (event.beta) {
-    document.getElementById("beta").textContent = `${event.beta.toFixed(2)}`
-  }
-  
-	if (event.gamma < -16 && currentColumn > 1) {
+	if (event.gamma < -70) {
     currentColumn = 1;
-		document.getElementById("block").className = `column-${currentColumn}`;
+		block.className = `column-${currentColumn}`;
 	}
   
-  if (event.gamma > -16 && event.gamma < 16) {
+  if (event.gamma > -70 && event.gamma < 70) {
     currentColumn = 2;
-		document.getElementById("block").className = `column-${currentColumn}`;
+		block.className = `column-${currentColumn}`;
 	}
  
-  if (event.gamma > 16) {
+  if (event.gamma > 70) {
     currentColumn = 3;
-		document.getElementById("block").className = `column-${currentColumn}`;
+		block.className = `column-${currentColumn}`;
 	}
   
-  document.getElementById("current-column").textContent = `${currentColumn}`
+  columnReadout.textContent = `${currentColumn}`
 }
   
 window.addEventListener("deviceorientation", moveBlock);
