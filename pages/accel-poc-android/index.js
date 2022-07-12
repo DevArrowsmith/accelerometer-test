@@ -27,7 +27,7 @@ function moveBlock(event) {
   document.getElementById("current-column").textContent = `${currentColumn}`
 }
   
-// window.addEventListener("deviceorientation", moveBlock);
+window.addEventListener("deviceorientation", moveBlock);
 
 // function getAccel(){
 //   alert("getAccel invoked");
