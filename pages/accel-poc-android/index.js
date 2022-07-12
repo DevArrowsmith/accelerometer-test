@@ -34,3 +34,13 @@ function moveBlock(event) {
 }
   
 window.addEventListener("deviceorientation", moveBlock);
+
+function getAccel(){
+  alert("getAccel invoked");
+    DeviceMotionEvent.requestPermission().then(response => {
+      alert(`Response: ${response}`);
+      if (response == 'granted') {
+        window.addEventListener('deviceorientation',(event) => moveBlock(event))
+      };
+    })
+};
