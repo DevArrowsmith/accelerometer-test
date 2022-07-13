@@ -10,19 +10,21 @@ body {
   background-color: #121212;
 }
 
-.link {
+.link-button, .permissions-button {
   padding: 10px;
   margin: 10px;
+  border: none;
   border-radius: 10px;
   background-color: #343434;
   text-decoration: none;
 }
 
-.link:hover {
+.link-button:hover, .permissions-button:hover {
+  cursor: pointer;
   background-color: #676767;
 }
 
-#centralise {
+#centralise-block {
   width: 100vw;
   height: 100vh;
   display: flex;

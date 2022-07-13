@@ -1,43 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {
-  color: #fefefe;
-  font-family: Roboto, arial, sans-serif;
-  font-size: 1.4rem;
-}
-
-body {
-  background-color: #121212;
-}
-
-#accelerometer-permissions {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  background-color: #343434;
-}
-
-#centralise {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.link {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
-  background-color: #343434;
-  text-decoration: none;
-}
-
-.link:hover {
-  background-color: #676767;
-}
-
 #container {
   position: relative;
   height: 75vh;
