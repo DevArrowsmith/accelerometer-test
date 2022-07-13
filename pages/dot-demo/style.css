@@ -1,4 +1,4 @@
-.indicatorDot{
+.indicator-dot{
   width: 30px;
   height: 30px;
   background-color: #ffab56;
@@ -6,4 +6,14 @@
   position:fixed;
   left:50%;
   top:50%;
+}
+
+.target-ring {
+  width: 25vw;
+  aspect-ratio: 1 / 1;
+  position:fixed;
+  left: 37.5vw;
+  top: calc(0.5 * calc(100vh - 25vw));
+  border-radius: 50%;
+  border: 3px solid chartreuse;
 }
