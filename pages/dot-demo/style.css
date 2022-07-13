@@ -4,4 +4,6 @@
   background-color: #ffab56;
   border-radius: 50%;
   position:fixed;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
 }
