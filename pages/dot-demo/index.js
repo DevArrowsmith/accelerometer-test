@@ -36,8 +36,6 @@ function getAccel(){
     DeviceMotionEvent.requestPermission().then(response => {
         alert(`Response: ${response}`);
         if (response == 'granted') {
-       // Add a listener to get smartphone orientation 
-           // in the alpha-beta-gamma axes (units in degrees)
             window.addEventListener('deviceorientation',(event) => moveDot(event))
         }
     });

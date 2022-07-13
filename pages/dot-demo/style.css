@@ -2,6 +2,7 @@
   width: 30px;
   height: 30px;
   background-color: #ffab56;
+  background-image: radial-gradient(circle at 65% 15%, #ffffff 1px, #ffd700 10%, #b8860b 50%, #b8860b 60%, #ffd700 100%);
   border-radius: 50%;
   position:fixed;
   left: calc(0.5 * calc(100vw - 30px));
