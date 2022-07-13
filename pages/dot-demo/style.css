@@ -4,10 +4,8 @@
   background-color: #ffab56;
   border-radius: 50%;
   position:fixed;
-  /* left: calc(0.5 * calc(100vw - 30px));
-  top: calc(0.5 * calc(100vh - 30px)); */
-  left: 50%;
-  top: 50%;
+  left: calc(0.5 * calc(100vw - 30px));
+  top: calc(0.5 * calc(100vh - 30px));
 }
 
 .target-ring {
