@@ -24,8 +24,9 @@ function moveDot(event) {
         vy = 0;
     }
     
-    dot = document.getElementsByClassName("indicator-dot")[0]
-    dot.setAttribute('style', "height:20px; width:20px; border-radius: 10px; background-color:goldenrod; position: absolute; left:" + (px) + "%;" + "top:" + (py) + "%;"); 
+    dot = document.getElementsByClassName("indicator-dot")[0];
+    dot.style.left = `${px} %`;
+    dot.style.top = `${py} %`;
 }
 
 window.addEventListener('deviceorientation', moveDot);
